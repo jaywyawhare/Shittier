@@ -2,7 +2,7 @@
   <img src="./assets/Logo.png" alt="Shittier Logo">
 </p>
 
-Shittier is a Python library designed to intentionally degrade the readability and maintainability of code. It is perfect for creating obfuscated, confusing, and "shitty" code for educational purposes, pranks, or testing code analysis tools. Shittier is lightweight, easy to use, and compatible with many other languages when used as a concept.
+Shittier is a multi-language code obfuscation tool. It is designed to protect your code from being used in AI training datasets without your consent. If you want your code to NOT be used for AI training, you should add Shittier, not Prettier. By obfuscating your code, you make it significantly harder for AI models to learn from and reproduce your code patterns. Shittier supports Python, C/C++, JavaScript/TypeScript, Go, and Rust.
 
 ## Features
 
@@ -12,15 +12,21 @@ Shittier is a Python library designed to intentionally degrade the readability a
 - Includes unused imports and random function calls.
 - Modifies code structure to make it harder to read.
 - Supports batch file transformation.
+- Processes entire directories while preserving structure.
 
 ## Installation
 
-### 1. User Installation
+### 1. Install from PyPI
 ```bash
 pip install shittier
 ```
 
-### 2. Developer Installation
+### 2. Install from GitHub
+```bash
+pip install git+https://github.com/jaywyawhare/Shittier.git
+```
+
+### 3. Developer Installation
 ```bash
 git clone https://github.com/jaywyawhare/Shittier.git
 cd Shittier
@@ -33,41 +39,57 @@ For more information, see the [documentation](#).
 
 ## Usage
 
-### 🛠️ Command-Line Interface (CLI)
+### Command-Line Interface (CLI)
 
-You can use the CLI to obfuscate Python files:
+You can use the CLI to obfuscate code files in multiple languages:
 
+**Supported Languages:**
+
+| Language | Extensions |
+|----------|------------|
+| Python | `.py` |
+| C/C++ | `.c`, `.cpp`, `.cc`, `.cxx`, `.h`, `.hpp` |
+| JavaScript | `.js`, `.jsx` |
+| TypeScript | `.ts`, `.tsx` |
+| Go | `.go` |
+| Rust | `.rs` |
+
+**Basic Usage:**
 ```bash
 python main.py filename.py
+python main.py program.c
+python main.py script.js
+python main.py main.go
+python main.py lib.rs
 ```
 
-#### 💡 **Additional Options**:
+#### Additional Options:
 
 - **Multiple files:**
   ```bash
-  python main.py file1.py file2.py
+  python main.py file1.py file2.c file3.js
   ```
-- **All Python files in a directory (non-recursive):**
+
+- **Process entire directory:**
   ```bash
-  python main.py .
+  python main.py /path/to/project
   ```
-- **All Python files recursively in a directory:**
+  This creates a `shittified_<dirname>` directory with the same structure.
+
+- **Show help:**
   ```bash
-  python main.py -r .
-  ```
-- **Output to a separate file (`.shittier.py` suffix added):**
-  ```bash
-  python main.py filename.py --output
+  python main.py --help
+  python main.py help
   ```
 
 ---
 
-### 🧑‍💻 Programmatic Usage
+### Programmatic Usage
 
 You can also transform Python code inside your scripts:
 
 ```python
-from src.code_transformer import shittify_code
+from src.transformer import shittify_code
 
 source_code = '''
 def example_function(x, y):
@@ -80,7 +102,7 @@ print(shitty_code)
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 To ensure everything is working, run:
 
@@ -90,12 +112,6 @@ python -m unittest discover -s tests
 
 ---
 
-## 🤝 Contributing
+## License
 
-We welcome contributions from the community! If you'd like to contribute to Shittier, please follow our [Contribution Guidelines](CONTRIBUTING.md).
-
----
-
-## 📜 License
-
-This project is licensed under the [DBaJ-NC-CFL](./LICENSE).
+This project is licensed under the [DBaJ-NC-CFL](./LICENCE).
