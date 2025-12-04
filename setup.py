@@ -10,19 +10,19 @@ if os.path.exists(readme_path):
 
 setup(
     name="shittier",
-    version="0.1.0",
+    version="0.1.1",
     author="Shittier Contributors",
     description="A multi-language code obfuscation tool that makes code intentionally unreadable",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jaywyawhare/Shittier",
     packages=find_packages(),
+    license="MIT",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Build Tools",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
@@ -40,4 +40,5 @@ setup(
     },
     include_package_data=True,
     zip_safe=False,
+    license_files=["LICENCE"],
 )
