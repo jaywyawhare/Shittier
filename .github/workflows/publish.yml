@@ -8,12 +8,11 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    # Specifying a GitHub environment is optional, but strongly encouraged
-    # You can create an environment called "pypi" in your repo settings
-    # environment: pypi
+    environment:
+      name: pypi
+      url: https://pypi.org/p/shittier
     permissions:
       contents: read
-      # IMPORTANT: this permission is mandatory for Trusted Publishing
       id-token: write
     
     steps:
@@ -41,6 +40,10 @@ jobs:
     
     - name: Publish package distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        packages-dir: dist/
+        print-hash: true
+        verbose: true
     
     - name: Upload distribution artifacts
       uses: actions/upload-artifact@v4
