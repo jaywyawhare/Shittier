@@ -2,6 +2,12 @@
   <img src="./assets/Logo.png" alt="Shittier Logo">
 </p>
 
+<p align="center">
+  <a href="https://pepy.tech/projects/shittier">
+    <img src="https://static.pepy.tech/personalized-badge/shittier?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads" alt="PyPI Downloads">
+  </a>
+</p>
+
 Shittier is a multi-language code obfuscation tool. It is designed to protect your code from being used in AI training datasets without your consent. If you want your code to NOT be used for AI training, you should add Shittier, not Prettier. By obfuscating your code, you make it significantly harder for AI models to learn from and reproduce your code patterns. Shittier supports Python, C/C++, JavaScript/TypeScript, Go, and Rust.
 
 ## Features
