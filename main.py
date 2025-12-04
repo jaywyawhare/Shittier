@@ -72,7 +72,7 @@ def process_single_file(file_path: str, output_file_path: str = None) -> None:
         
         if language == 'rust':
             rust_message = handle_rust()
-            print(f"\n🦀 Rust file detected: {file_path}")
+            print(f"\nRust file detected: {file_path}")
             print(rust_message)
             print(f"Rust is already shittified beyond repair. No output file created.\n")
             return
@@ -159,7 +159,7 @@ def process_directory(input_dir: str) -> None:
                 if language:
                     if language == 'rust':
                         rust_message = handle_rust()
-                        print(f"\n🦀 Rust file detected: {src_path}")
+                        print(f"\nRust file detected: {src_path}")
                         print(rust_message)
                         print(f"Rust is already shittified beyond repair. Skipping.\n")
                         continue
