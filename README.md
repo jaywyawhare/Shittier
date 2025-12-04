@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/Logo.png" alt="Shittier Logo">
+  <img src="https://raw.githubusercontent.com/jaywyawhare/Shittier/master/assets/Logo.png" alt="Shittier Logo">
 </p>
 
 <p align="center">

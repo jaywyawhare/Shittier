@@ -10,7 +10,7 @@ if os.path.exists(readme_path):
 
 setup(
     name="shittier",
-    version="0.1.1",
+    version="0.1.2",
     author="Shittier Contributors",
     description="A multi-language code obfuscation tool that makes code intentionally unreadable",
     long_description=long_description,
